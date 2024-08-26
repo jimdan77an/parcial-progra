@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous"
+    />
+    <title>Corporate | Welcome</title>
+    <style>
+        .bg-rosa {
+            background-color: #f7c6c7; 
+        }
+
+        .bg-lila {
+            background-color: #d1a2a3; 
+        }
+        .text-rosa {
+            color: #f7c6c7; 
+        }
+        .text-lila {
+            color: #d1a2a3; 
+        }
+        .text-muted {
+            color: #c0c0c0; 
+        }
+        .card {
+            background-color: #fff; 
+        }
+        .card .btn-link {
+            color: #d1a2a3; 
+        }
+        .card .fa-circle {
+            color: #d1a2a3; 
+        }
+        .card .fa-stack-1x {
+            color: #fff;
+        }
+        footer {
+            background-color: #f7c6c7; 
+            color: #fff;
+        }
+        .bg-lila-hover {
+            background-color: #d1a2a3; 
+            transition: background-color 0.3s, color 0.3s; 
+        }
+        .bg-lila-hover:hover {
+            background-color: #e68a8a; 
+            color: #fff; 
+        }
+        .bg-lila-hover h4, .bg-lila-hover a {
+            color: #d1a2a3; 
+            transition: color 0.3s; 
+        }
+        .bg-lila-hover p {
+            color: #000000; 
+            transition: color 0.3s; 
+        }
+        .bg-lila-hover:hover p{
+            color: #ffffff; 
+        }
+        .bg-lila-hover:hover h4, .bg-lila-hover:hover a {
+            color: #D1A2A3; 
+        }
+        .icon-hover {
+            color: #b387a1; 
+            transition: color 0.3s; 
+        }
+        .icon-hover:hover {
+            color: #55394a; 
+        }
+        .service-col {
+            transition: background-color 0.3s; 
+            cursor: pointer; 
+        }
+        .service-col:hover {
+            background-color: #e0aaff; 
+        }
+        .bg-celeste {
+            background-color: #b3e0ff;
+        }
+        .form-control {
+            transition: background-color 0.3s, color 0.3s; 
+        }
+        .form-control:focus, .form-control.active {
+            background-color: #e68a8a; 
+            color: #fff; 
+            border-color: #e68a8a; 
+        }
+        .form-control:not(:focus) {
+            background-color: #fff; 
+            color: #e68a8a; 
+        }
+        .form-control.active:not(:focus) {
+            background-color: #fff; 
+            color: #e68a8a; 
+        }
+
+        .btn.bg-lila {
+            background-color: #d1a2a3; 
+            border-color: #d1a2a3; 
+            transition: background-color 0.3s, border-color 0.3s; 
+        }
+        .btn.bg-lila:hover {
+            background-color: #e68a8a; 
+            border-color: #e68a8a; 
+        }
+        .get-trial-text {
+            color: #d1a2a3; 
+            transition: color 0.3s; 
+        }
+        .get-trial-text:hover {
+            color: #d1a2a3; 
+        }
+        .stats h2:hover, .stats p:hover {
+            color: #55394a; 
+        }
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color:#D1A2A3;
+        }
+        .features-container .col-md-4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .features-container:hover{
+            background-color: #e68a8a;
+        }
+        .features-container .service-col {
+            max-width: 100%;
+        }
+        
+         /* Media queries for responsiveness */
+         @media (max-width: 767.98px) {
+            .navbar-nav {
+                text-align: center;
+            }
+            .navbar-collapse {
+                margin-top: 1rem;
+            }
+            .features-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            .display-4 {
+                font-size: 2rem;
+            }
+            .features-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="bg-rosa py-3">
+        <nav class="navbar navbar-expand-md bg-rosa navbar-dark mb-5">
+            <div class="container">
+                <a href="#" class="navbar-brand fs-3">corporate</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="#header" class="nav-link text-white">Home</a></li>
+                        <li class="nav-item"><a href="#features" class="nav-link text-white">Features</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link text-white">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Showcase -->
+        <div class="container py-3 bg-lila-hover">
+            <div class="row pb-5">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <h1 class="display-4 mb-4 fw-3">
+                        Professional Corporate Landing Page for <span class="fw-bold"> Business</span>
+                    </h1>
+                    <p class="lead">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad voluptas laudantium quidem velit cum dolorum
+                        totam sapiente, iure officia ex?
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="text-center get-trial-text">Get 30 day FREE trial</h4>
+                            <form id="contactForm" class="p-5">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">First Name</label>
+                                    <input type="text" id="name" class="form-control" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" id="lastName" class="form-control" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" class="form-control" required />
+                                </div>
+                                <input type="submit" class="btn bg-lila text-white w-100" value="Submit" />
+                            </form>
+                            <div id="confirmationMessage" class="mt-3 d-none alert alert-success" role="alert">
+                                Your form has been submitted successfully!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!-- Features -->
+<section id="features" class="py-5 bg-rosa text-white"> 
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="text-center fw-light pb-3 text-capitalize">
+                    Our <span class="fw-bold">Features</span>
+                </h2>
+                <p class="text-center text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic recusandae eaque neque deserunt optio. Nihil
+                    ratione amet nobis quidem provident. Deserunt, labore. At, sapiente error?
+                </p>
+            </div>
+        </div>
+        <div class="row features-container justify-content-center text-center">
+            <div class="col-md-4 mb-4">
+                <div class="d-flex flex-column align-items-center gap-4">
+                    <i class="fas fa-user fa-3x text-lila icon-hover"></i>
+                    <div class="text-center">
+                        <h5 class="fw-bold">Website Performance</h5>
+                        <p class="text-muted">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, dignissimos ullam. Sunt ab
+                            voluptatibus neque soluta impedit autem?
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="d-flex flex-column align-items-center gap-4">
+                    <i class="fas fa-arrow-trend-up fa-3x text-lila icon-hover"></i>
+                    <div class="text-center">
+                        <h5 class="fw-bold">Marketing Performance</h5>
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, dignissimos ullam. Sunt ab
+                            voluptatibus neque soluta impedit autem?
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="d-flex flex-column align-items-center gap-4">
+                    <i class="fas fa-rocket fa-3x text-lila icon-hover"></i>
+                    <div class="text-center">
+                        <h5 class="fw-bold">SEP Performance</h5>
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, dignissimos ullam. Sunt ab
+                            voluptatibus neque soluta impedit autem?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <img src="features.jpg" width="500" height="350" alt="Responsive image" class="img-fluid" />
+        </div>
+    </div>
+</section>
+
+    
+    
+
+    <!-- Statistics -->
+    <section class="stats bg-lila text-white">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-3 text-center">
+                    <h2 class="display-2 fw-bold">328</h2>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h2 class="display-2 fw-bold">285</h2>
+                    <p>Issues Solved</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h2 class="display-2 fw-bold">159</h2>
+                    <p>Good Reviews</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h2 class="display-2 fw-bold">128</h2>
+                    <p>Case Studies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-5 bg-rosa text-white">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-8 offset-lg-2">
+                    <h2 class="text-center fw-light pb-3 text-capitalize">
+                        Our <span class="fw-bold">Services</span>
+                    </h2>
+                    <p class="text-center text-muted">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic recusandae eaque neque deserunt optio. Nihil
+                        ratione amet nobis quidem provident. Deserunt, labore. At, sapiente error?
+                    </p>
+                </div>
+            </div>
+            <!-- Contenedor principal -->
+            <div class="container">
+                <!-- Sección con contenedor de color lila con líneas divisorias -->
+                <section>
+                    <div class="row bg-light text-dark py-5 rounded">
+                        <div id="service1" class="col-md-4 text-center border-end border-2 border-dark service-col">
+                            <h3><i class="fas fa-cogs fa-4x icon-hover"></i></h3>
+                            <h4>Website Performance</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum necessitatibus rerum ipsa quaerat et eius minima in praesentium.</p>
+                            <a href="#" class="btn btn-link text-dark text-decoration-none">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div id="service2" class="col-md-4 text-center border-end border-2 border-dark service-col">
+                            <h3><i class="fas fa-heart fa-4x icon-hover"></i></h3>
+                            <h4>Marketing Performance</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum necessitatibus rerum ipsa quaerat et eius minima in praesentium.</p>
+                            <a href="#" class="btn btn-link text-dark text-decoration-none">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div id="service3" class="col-md-4 text-center service-col">
+                            <h3><i class="fas fa-chart-line fa-4x icon-hover"></i></h3>
+                            <h4>SEO Performance</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum necessitatibus rerum ipsa quaerat et eius minima in praesentium.</p>
+                            <a href="#" class="btn btn-link text-dark text-decoration-none">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-rosa text-white">
+        <div class="container text-center">
+            <p>&copy; 2024 Corporate. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9GFnBzFSdfjRTy1DQ0Dhw6G8nE+z/Ovv3Xy5GRcwoD9z4f0FJcX" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-ggtFQn0M9M5fJtD5KnTVuEz4f9o/lTAe3D4LrxMN9m8r5GATiZ5B9/csi0DzD06F5" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Manejo del envío del formulario
+            const form = document.getElementById('contactForm');
+            const confirmationMessage = document.getElementById('confirmationMessage');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Evita el envío real del formulario
+
+                // Muestra el mensaje de confirmación
+                confirmationMessage.classList.remove('d-none');
+
+                // Reinicia el formulario
+                form.reset();
+
+                // Opcional: Para volver a mostrar el formulario después de un tiempo
+                setTimeout(function () {
+                    confirmationMessage.classList.add('d-none');
+                }, 3000); // Oculta el mensaje de confirmación después de 3 segundos
+            });
+
+            // Obtén todos los elementos de servicio
+            const serviceCols = document.querySelectorAll('.service-col');
+
+            // Itera sobre cada elemento y agrega un evento de clic
+            serviceCols.forEach(function (col) {
+                col.addEventListener('click', function () {
+                    // Remueve la clase de fondo celeste de todos los elementos
+                    serviceCols.forEach(function (element) {
+                        element.classList.remove('bg-celeste');
+                    });
+
+                    // Añade la clase de fondo celeste al elemento clicado
+                    this.classList.add('bg-celeste');
+                });
+            });
+
+            // Obtén todos los campos de entrada
+            const formControls = document.querySelectorAll('.form-control');
+
+            // Itera sobre cada campo de entrada y agrega eventos de enfoque y escritura
+            formControls.forEach(function (control) {
+                control.addEventListener('focus', function () {
+                    this.classList.add('active');
+                });
+
+                control.addEventListener('blur', function () {
+                    this.classList.remove('active');
+                });
+
+                control.addEventListener('input', function () {
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html
